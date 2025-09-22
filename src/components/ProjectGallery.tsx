@@ -15,14 +15,13 @@ export function ProjectGallery({ projectId, onImageClick }: ProjectGalleryProps)
   const [images, setImages] = useState<{url: string, title: string}[]>([]);
 
   useEffect(() => {
-    // En un entorno real, aquí harías una llamada a tu API para obtener la lista de imágenes
-    // Por ahora, simularemos que obtenemos las imágenes de la carpeta
+    // Obtener las imágenes de la configuración estática
     const fetchImages = async () => {
       try {
-        // Esto es un ejemplo. En producción, necesitarías un endpoint que liste los archivos
-        const response = await fetch(`/api/projects/${projectId}/images`);
-        const data = await response.json();
-        setImages(data.images);
+        // Importar la configuración estática
+        const { getProjectImages } = await import('../lib/projects');
+        const projectImages = getProjectImages(projectId);
+        setImages(projectImages);
       } catch (error) {
         console.error('Error fetching images:', error);
       }

@@ -34,11 +34,12 @@ export function ProjectCard({ title, description, technologies, githubUrl, media
     // Cargar imágenes dinámicas cuando el componente se monta
     const loadDynamicImages = async () => {
       try {
-        const response = await fetch(`/api/projects/${projectId}/images`);
-        const data = await response.json();
+        // Importar la configuración estática
+        const { getProjectImages } = await import('../lib/projects');
+        const images = getProjectImages(projectId);
         
         // Convertir las imágenes al formato esperado por el viewer
-        const dynamicImages = data.images.map((img: any) => ({
+        const dynamicImages = images.map((img: any) => ({
           type: 'image' as const,
           url: img.url,
           title: img.title,
