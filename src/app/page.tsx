@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProjectCard } from '../components/ProjectCard'
-import { projectsConfig, getProjectTechnologies, getProjectGitHub } from '../lib/projects'
+import { projectsConfig } from '../lib/projects'
 import { 
   SiFlask, 
   SiFastapi, 
@@ -23,8 +23,8 @@ export default function Home() {
     projectId: project.id,
     title: project.name,
     description: project.description,
-    technologies: getProjectTechnologies(project.id),
-    githubUrl: getProjectGitHub(project.id),
+    technologies: project.technologies,
+    githubUrl: project.githubUrl,
     demoUrl: project.demoUrl,
     media: project.images.map(img => ({
       type: 'image' as const,

@@ -9,8 +9,10 @@ export interface Project {
   id: string;
   name: string;
   description: string;
+  technologies: string[];
   images: ProjectImage[];
   demoUrl?: string;
+  githubUrl?: string;
 }
 
 // Helper para generar rutas correctas para GitHub Pages
@@ -22,9 +24,36 @@ const getAssetPath = (path: string) => {
 // Configuración manual de imágenes por proyecto
 export const projectsConfig: Project[] = [
   {
+    id: 'task-tracker',
+    name: 'Task Tracker',
+    description: 'Sistema completo de gestión de tareas con API REST y widget de clima en tiempo real. Desarrollado con FastAPI, SQLAlchemy, y JavaScript vanilla. Incluye CRUD completo, dashboard con estadísticas, documentación automática con Swagger UI y deploy containerizado.',
+    technologies: ['FastAPI', 'SQLAlchemy', 'SQLite', 'JavaScript', 'CSS3', 'HTML5', 'Docker', 'Pydantic', 'Uvicorn'],
+    githubUrl: 'https://github.com/Ion25/taskTracker.git',
+    demoUrl: 'https://tasktracker-06w8.onrender.com/app',
+    images: [
+      {
+        url: getAssetPath('/projects/task-tracker/images/dashboard.png'),
+        title: 'Dashboard Principal',
+        thumbnail: getAssetPath('/projects/task-tracker/images/dashboard.png')
+      },
+      {
+        url: getAssetPath('/projects/task-tracker/images/task-management.png'),
+        title: 'Gestión de Tareas',
+        thumbnail: getAssetPath('/projects/task-tracker/images/task-management.png')
+      },
+      {
+        url: getAssetPath('/projects/task-tracker/images/user-auth.png'),
+        title: 'Sistema de Autenticación',
+        thumbnail: getAssetPath('/projects/task-tracker/images/user-auth.png')
+      }
+    ]
+  },
+  {
     id: 'alea',
     name: 'Alea Project',
     description: 'Sistema de análisis y visualización de datos',
+    technologies: ['Python', 'Data Analysis', 'Visualization', 'Statistics'],
+    githubUrl: 'https://github.com/Ion25/ALEA/tree/Entregable1',
     images: [
       {
         url: getAssetPath('/projects/alea/images/Captura desde 2025-09-18 02-44-00.png'),
@@ -62,6 +91,8 @@ export const projectsConfig: Project[] = [
     id: 'bank-api',
     name: 'Bank API System',
     description: 'Sistema bancario con API REST completa',
+    technologies: ['Java', 'Spring Boot', 'REST API', 'MySQL', 'JWT', 'Microservices'],
+    githubUrl: 'https://github.com/Ion25/bancoRestAPI.git',
     images: [
       {
         url: getAssetPath('/projects/bank-api/images/353605126-9504e344-69f0-43dd-aeca-336c9873a126.png'),
@@ -109,6 +140,8 @@ export const projectsConfig: Project[] = [
     id: 'cnn-forward',
     name: 'CNN Forward Propagation',
     description: 'Implementación de red neuronal convolucional',
+    technologies: ['Python', 'TensorFlow', 'NumPy', 'Machine Learning', 'Deep Learning', 'CNN'],
+    githubUrl: 'https://github.com/Ion25/vitc-.git',
     images: [
       {
         url: getAssetPath('/projects/cnn-forward/images/472669032-b99985a8-e1fb-4537-807c-b44711fb8b56.jpeg'),
@@ -131,6 +164,8 @@ export const projectsConfig: Project[] = [
     id: 'kafka-aws',
     name: 'Kafka AWS Integration',
     description: 'Sistema de streaming de datos con Apache Kafka en AWS',
+    technologies: ['Apache Kafka', 'AWS', 'Docker', 'Java', 'Streaming', 'Microservices', 'EC2'],
+    githubUrl: 'https://github.com/Ion25/kafka-aws-project.git',
     images: [
       {
         url: getAssetPath('/projects/kafka-aws/images/Captura desde 2025-07-17 14-51-39.png'),
@@ -168,29 +203,6 @@ export const projectsConfig: Project[] = [
         thumbnail: getAssetPath('/projects/kafka-aws/images/Screenshot from 2025-07-10 15-42-10.png')
       }
     ]
-  },
-  {
-    id: 'task-tracker',
-    name: 'Task Tracker',
-    description: 'Aplicación web completa para gestión y seguimiento de tareas con autenticación, asignación de usuarios y dashboard en tiempo real.',
-    demoUrl: 'https://tasktracker-06w8.onrender.com/app',
-    images: [
-      {
-        url: getAssetPath('/projects/task-tracker/images/dashboard.png'),
-        title: 'Dashboard Principal',
-        thumbnail: getAssetPath('/projects/task-tracker/images/dashboard.png')
-      },
-      {
-        url: getAssetPath('/projects/task-tracker/images/task-management.png'),
-        title: 'Gestión de Tareas',
-        thumbnail: getAssetPath('/projects/task-tracker/images/task-management.png')
-      },
-      {
-        url: getAssetPath('/projects/task-tracker/images/user-auth.png'),
-        title: 'Sistema de Autenticación',
-        thumbnail: getAssetPath('/projects/task-tracker/images/user-auth.png')
-      }
-    ]
   }
 ];
 
@@ -203,28 +215,4 @@ export function getProjectById(id: string): Project | undefined {
 export function getProjectImages(projectId: string): ProjectImage[] {
   const project = getProjectById(projectId);
   return project ? project.images : [];
-}
-
-// Función para obtener las tecnologías de cada proyecto
-export function getProjectTechnologies(projectId: string): string[] {
-  const techMap: Record<string, string[]> = {
-    'alea': ['OpenAI API', 'OCR', 'Mobile Dev'],
-    'bank-api': ['Spring Boot', 'DDD', 'JMeter'],
-    'cnn-forward': ['C++', 'libtorch', 'Computer Vision'],
-    'kafka-aws': ['AWS', 'Kafka', 'DevOps'],
-    'task-tracker': ['React', 'Node.js', 'MongoDB', 'TypeScript']
-  };
-  return techMap[projectId] || [];
-}
-
-// Función para obtener las URLs de GitHub de cada proyecto
-export function getProjectGitHub(projectId: string): string | undefined {
-  const githubMap: Record<string, string> = {
-    'alea': 'https://github.com/Ion25/ALEA/tree/Entregable1',
-    'bank-api': 'https://github.com/Ion25/bancoRestAPI.git',
-    'cnn-forward': 'https://github.com/Ion25/vitc-.git',
-    'kafka-aws': 'https://github.com/Ion25/kafka-aws-project.git',
-    'task-tracker': 'https://github.com/Ion25/task-tracker.git'
-  };
-  return githubMap[projectId];
 }
