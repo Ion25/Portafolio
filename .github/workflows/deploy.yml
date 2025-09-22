@@ -3,8 +3,6 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,16 +32,25 @@ jobs:
           node-version: '18'
           cache: 'npm'
       
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          # Automatically inject basePath in your Next.js configuration file and disable
+          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+          #
+          # You may remove this line if you want to manage the configuration yourself.
+          static_site_generator: next
+      
       - name: Install dependencies
         run: npm ci
       
-      - name: Build Next.js app
+      - name: Build with Next.js
         run: npm run build
         env:
           NODE_ENV: production
       
       - name: Create .nojekyll file
-        run: touch dist/.nojekyll
+        run: touch ./dist/.nojekyll
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
