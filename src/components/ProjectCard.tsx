@@ -32,7 +32,30 @@ export function ProjectCard({ title, description, technologies, githubUrl, demoU
     'Python': 'Lenguaje de programación principal del backend',
     'SQLAlchemy': 'ORM para gestión y mapeo de base de datos',
     'Swagger': 'Documentación automática de la API REST',
-    'Uvicorn': 'Servidor ASGI de alta performance para producción'
+    'Uvicorn': 'Servidor ASGI de alta performance para producción',
+    'Java': 'Lenguaje orientado a objetos para desarrollo empresarial',
+    'C++': 'Lenguaje de programación de alto rendimiento',
+    'Algorithms': 'Implementación de algoritmos computacionales',
+    'Data Structures': 'Estructuras de datos fundamentales',
+    'Problem Solving': 'Resolución sistemática de problemas',
+    'Spring Boot': 'Framework de Java para microservicios',
+    'REST API': 'Arquitectura para servicios web RESTful',
+    'MySQL': 'Sistema de gestión de bases de datos relacionales',
+    'JWT': 'Tokens de autenticación JSON Web Token',
+    'Microservices': 'Arquitectura de servicios distribuidos',
+    'TensorFlow': 'Framework de machine learning',
+    'NumPy': 'Biblioteca para computación científica',
+    'Machine Learning': 'Aprendizaje automático y modelado',
+    'Deep Learning': 'Redes neuronales profundas',
+    'CNN': 'Redes neuronales convolucionales',
+    'Apache Kafka': 'Plataforma de streaming distribuido',
+    'AWS': 'Servicios de computación en la nube',
+    'Docker': 'Containerización y virtualización',
+    'Streaming': 'Procesamiento de datos en tiempo real',
+    'EC2': 'Instancias de computación elástica de AWS',
+    'Data Analysis': 'Análisis y procesamiento de datos',
+    'Visualization': 'Visualización de datos y gráficos',
+    'Statistics': 'Análisis estadístico y modelado'
   };
 
   const openGallery = (index: number) => {
@@ -73,7 +96,23 @@ export function ProjectCard({ title, description, technologies, githubUrl, demoU
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg">
-      <h3 className="text-xl font-semibold mb-4">{title}</h3>
+      {/* Header with title and demo button */}
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-xl font-semibold">{title}</h3>
+        {demoUrl && (
+          <a
+            href={demoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors duration-200"
+          >
+            <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            Ver Demo
+          </a>
+        )}
+      </div>
       <p className="text-gray-600 mb-4">{description}</p>
       
       {/* Media Gallery */}
@@ -141,17 +180,6 @@ export function ProjectCard({ title, description, technologies, githubUrl, demoU
           target="_blank"
         >
           Ver proyecto →
-        </Link>
-      )}
-
-      {/* Demo Link */}
-      {demoUrl && (
-        <Link
-          href={demoUrl}
-          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg inline-block transition-colors"
-          target="_blank"
-        >
-          Ver demo
         </Link>
       )}
 
