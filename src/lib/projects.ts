@@ -217,38 +217,38 @@ export const projectsConfig: Project[] = [
   {
     id: 'ejercicios-programacion',
     name: 'Ejercicios de Programación',
-    description: 'Colección de ejercicios y desafíos de programación resueltos en diversas plataformas como LeetCode, HackerRank, Codewars y ejercicios académicos. Incluye algoritmos de ordenamiento, estructuras de datos, programación dinámica, y resolución de problemas computacionales usando diferentes lenguajes de programación.',
+    description: 'Colección de ejercicios y desafíos de programación resueltos en diversas plataformas competitivas como BeeCrowd, OmegaUp, Codeforces y AceptaElReto. Incluye implementación de algoritmos de ordenamiento, estructuras de datos, programación dinámica, teoría de grafos y resolución de problemas computacionales usando diferentes lenguajes de programación.',
     technologies: ['Python', 'Java', 'C++', 'Algorithms', 'Data Structures', 'Problem Solving'],
     images: [
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-28-00.png'),
-        title: 'Ejercicios de Algoritmos - Resolución de problemas',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-28-00.png')
+        url: getAssetPath('/projects/ejercicios-programacion/images/beecrowd-solutions.png'),
+        title: 'BeeCrowd - Soluciones de problemas competitivos',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/beecrowd-solutions.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-28-25.png'),
-        title: 'Estructuras de Datos - Implementaciones',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-28-25.png')
+        url: getAssetPath('/projects/ejercicios-programacion/images/omegaup-challenges.png'),
+        title: 'OmegaUp - Desafíos algorítmicos',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/omegaup-challenges.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-28-43.png'),
-        title: 'Programación Dinámica - Optimización',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-28-43.png')
+        url: getAssetPath('/projects/ejercicios-programacion/images/codeforces-contests.png'),
+        title: 'Codeforces - Participación en concursos',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/codeforces-contests.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-29-11.png'),
-        title: 'Desafíos de Código - Plataformas online',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-29-11.png')
+        url: getAssetPath('/projects/ejercicios-programacion/images/aceptaelreto-problems.png'),
+        title: 'AceptaElReto - Resolución de problemas',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/aceptaelreto-problems.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-29-29.png'),
-        title: 'Soluciones Académicas - Ejercicios universitarios',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-29-29.png')
+        url: getAssetPath('/projects/ejercicios-programacion/images/data-structures-implementation.png'),
+        title: 'Estructuras de Datos - Implementaciones propias',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/data-structures-implementation.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-29-49.png'),
-        title: 'Análisis de Complejidad - Optimización de código',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2024-06-19 14-29-49.png')
+        url: getAssetPath('/projects/ejercicios-programacion/images/algorithms-analysis.png'),
+        title: 'Análisis de Algoritmos - Complejidad y optimización',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/algorithms-analysis.png')
       }
     ]
   }
