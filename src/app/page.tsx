@@ -13,7 +13,6 @@ import {
   SiLinux,
   SiPostgresql,
   SiMongodb,
-  SiRedis,
   SiMysql
 } from 'react-icons/si'
 
@@ -133,16 +132,6 @@ export default function Home() {
                 <li className="flex items-center space-x-2">
                   <SiMongodb className="text-2xl text-green-500" />
                   <span>MongoDB</span>
-                </li>
-                <li className="flex items-center space-x-2">
-                  <SiRedis className="text-2xl text-red-500" />
-                  <span>Redis</span>
-                </li>
-                <li className="flex items-center space-x-2 pl-1">
-                  <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  <span>Optimización de Queries</span>
                 </li>
               </ul>
             </div>
