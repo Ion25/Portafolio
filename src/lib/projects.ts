@@ -27,24 +27,34 @@ export const projectsConfig: Project[] = [
     id: 'task-tracker',
     name: 'Task Tracker',
     description: 'Sistema completo de gestión de tareas con API REST y widget de clima en tiempo real. Desarrollado con FastAPI, SQLAlchemy, y JavaScript vanilla. Incluye CRUD completo, dashboard con estadísticas, documentación automática con Swagger UI y deploy containerizado.',
-    technologies: ['FastAPI', 'SQLAlchemy', 'SQLite', 'JavaScript', 'CSS3', 'HTML5', 'Docker', 'Pydantic', 'Uvicorn'],
+    technologies: ['FastAPI', 'Python', 'SQLAlchemy', 'Swagger', 'Uvicorn'],
     githubUrl: 'https://github.com/Ion25/taskTracker.git',
     demoUrl: 'https://tasktracker-06w8.onrender.com/app',
     images: [
       {
-        url: getAssetPath('/projects/task-tracker/images/dashboard.png'),
-        title: 'Dashboard Principal',
-        thumbnail: getAssetPath('/projects/task-tracker/images/dashboard.png')
+        url: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-03.png'),
+        title: 'Dashboard Principal - Vista general de tareas',
+        thumbnail: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-03.png')
       },
       {
-        url: getAssetPath('/projects/task-tracker/images/task-management.png'),
-        title: 'Gestión de Tareas',
-        thumbnail: getAssetPath('/projects/task-tracker/images/task-management.png')
+        url: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-10.png'),
+        title: 'Gestión de Tareas - CRUD completo',
+        thumbnail: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-10.png')
       },
       {
-        url: getAssetPath('/projects/task-tracker/images/user-auth.png'),
-        title: 'Sistema de Autenticación',
-        thumbnail: getAssetPath('/projects/task-tracker/images/user-auth.png')
+        url: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-27.png'),
+        title: 'API REST - Documentación Swagger',
+        thumbnail: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-27.png')
+      },
+      {
+        url: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-39.png'),
+        title: 'Widget de Clima - Integración externa',
+        thumbnail: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-39.png')
+      },
+      {
+        url: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-55.png'),
+        title: 'Estadísticas - Dashboard en tiempo real',
+        thumbnail: getAssetPath('/projects/task-tracker/images/Captura desde 2025-09-22 00-27-55.png')
       }
     ]
   },
