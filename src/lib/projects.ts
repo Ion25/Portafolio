@@ -221,34 +221,59 @@ export const projectsConfig: Project[] = [
     technologies: ['Python', 'Java', 'C++', 'Algorithms', 'Data Structures', 'Problem Solving'],
     images: [
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/beecrowd-solutions.png'),
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-17-30.png'),
         title: 'BeeCrowd - Soluciones de problemas competitivos',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/beecrowd-solutions.png')
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-17-30.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/omegaup-challenges.png'),
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-17-51.png'),
         title: 'OmegaUp - Desafíos algorítmicos',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/omegaup-challenges.png')
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-17-51.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/codeforces-contests.png'),
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-18-25.png'),
         title: 'Codeforces - Participación en concursos',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/codeforces-contests.png')
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-18-25.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/aceptaelreto-problems.png'),
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-18-39.png'),
         title: 'AceptaElReto - Resolución de problemas',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/aceptaelreto-problems.png')
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-18-39.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/data-structures-implementation.png'),
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-19-25.png'),
         title: 'Estructuras de Datos - Implementaciones propias',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/data-structures-implementation.png')
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-19-25.png')
       },
       {
-        url: getAssetPath('/projects/ejercicios-programacion/images/algorithms-analysis.png'),
-        title: 'Análisis de Algoritmos - Complejidad y optimización',
-        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/algorithms-analysis.png')
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-19-47.png'),
+        title: 'Algoritmos de Ordenamiento - Análisis de complejidad',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-19-47.png')
+      },
+      {
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-23-36.png'),
+        title: 'Programación Dinámica - Optimización de soluciones',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-23-36.png')
+      },
+      {
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-23-45.png'),
+        title: 'Teoría de Grafos - Algoritmos de búsqueda',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-23-45.png')
+      },
+      {
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-24-02.png'),
+        title: 'Matemática Computacional - Problemas numéricos',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 02-24-02.png')
+      },
+      {
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 03-24-55.png'),
+        title: 'Concursos de Programación - Rankings y estadísticas',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 03-24-55.png')
+      },
+      {
+        url: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 03-29-54.png'),
+        title: 'Análisis de Rendimiento - Optimización de código',
+        thumbnail: getAssetPath('/projects/ejercicios-programacion/images/Captura desde 2025-09-22 03-29-54.png')
       }
     ]
   }
