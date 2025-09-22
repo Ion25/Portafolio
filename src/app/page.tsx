@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ProjectCard } from '../components/ProjectCard'
+import { projectsConfig, getProjectTechnologies, getProjectGitHub } from '../lib/projects'
 import { 
   SiFlask, 
   SiFastapi, 
@@ -17,119 +18,22 @@ import {
 } from 'react-icons/si'
 
 export default function Home() {
-  const projects = [
-    {
-      projectId: 'bank-api',
-      title: 'API Bancaria con DDD',
-      description: 'REST API siguiendo principios SOLID, DDD y arquitectura Hexagonal. Implementación completa con pruebas de rendimiento y seguridad.',
-      technologies: ['Spring Boot', 'DDD', 'JMeter'],
-      githubUrl: 'https://github.com/Ion25/bancoRestAPI.git',
-      media: [
-        {
-          type: 'image' as const,
-          url: '/projects/bank-api/images/arch.png',
-          title: 'Arquitectura del Sistema',
-          thumbnail: '/projects/bank-api/images/arch-thumb.png'
-        },
-        {
-          type: 'pdf' as const,
-          url: '/projects/bank-api/docs/documentation.pdf',
-          title: 'Documentación Técnica'
-        }
-      ]
-    },
-    {
-      projectId: 'music-search',
-      title: 'Sistema de Búsqueda Musical',
-      description: 'Motor de búsqueda distribuido con procesamiento batch y streaming. Implementación con Hadoop, Spark y Kafka.',
-      technologies: ['Hadoop', 'Spark', 'Kafka'],
-      githubUrl: 'https://github.com/OwenRoque/Hadoop-Search-Engine.git',
-      media: [
-        {
-          type: 'image' as const,
-          url: '/projects/music-search/images/arch.png',
-          title: 'Arquitectura Distribuida',
-          thumbnail: '/projects/music-search/images/arch-thumb.png'
-        },
-        {
-          type: 'pdf' as const,
-          url: '/projects/music-search/docs/flow.pdf',
-          title: 'Flujo de Datos'
-        }
-      ]
-    },
-    {
-      projectId: 'kafka-aws',
-      title: 'Kafka en AWS',
-      description: 'Configuración de clústeres Kafka con ZooKeeper y KRaft en AWS EC2. Diseño de experimentos de tolerancia a fallos.',
-      technologies: ['AWS', 'Kafka', 'DevOps'],
-      media: [
-        {
-          type: 'image' as const,
-          url: '/projects/kafka-aws/images/cluster.png',
-          title: 'Arquitectura del Cluster',
-          thumbnail: '/projects/kafka-aws/images/cluster-thumb.png'
-        },
-        {
-          type: 'pdf' as const,
-          url: '/projects/kafka-aws/docs/results.pdf',
-          title: 'Resultados de Pruebas'
-        }
-      ]
-    },
-    {
-      projectId: 'cnn-forward',
-      title: 'Vision Transformer en C++',
-      description: 'Implementación de un Vision Transformer (ViT) en C++ usando la API libtorch. Clasificación de imágenes en MNIST y Fashion-MNIST.',
-      technologies: ['C++', 'libtorch', 'Computer Vision'],
-      githubUrl: 'https://github.com/Ion25/vitc-.git',
-      media: [
-        {
-          type: 'image' as const,
-          url: '/projects/cnn-forward/images/architecture.png',
-          title: 'Arquitectura de la CNN',
-          thumbnail: '/projects/cnn-forward/images/architecture-thumb.png'
-        },
-        {
-          type: 'image' as const,
-          url: '/projects/cnn-forward/images/results.png',
-          title: 'Resultados y Activaciones',
-          thumbnail: '/projects/cnn-forward/images/results-thumb.png'
-        },
-        {
-          type: 'pdf' as const,
-          url: '/projects/cnn-forward/docs/documentation.pdf',
-          title: 'Documentación Técnica CNN'
-        }
-      ]
-    },
-    {
-      projectId: 'alea',
-      title: 'ALEA — App de Nutrición con IA',
-      description: 'Aplicación móvil para control de peso y registro de comidas. Implementación de scanner OCR de etiquetas con IA y registro por voz.',
-      technologies: ['OpenAI API', 'OCR', 'Mobile Dev'],
-      githubUrl: 'https://github.com/Ion25/ALEA/tree/Entregable1',
-      media: [
-        {
-          type: 'image' as const,
-          url: '/projects/alea/images/ui.png',
-          title: 'Interfaz de Usuario',
-          thumbnail: '/projects/alea/images/ui-thumb.png'
-        },
-        {
-          type: 'image' as const,
-          url: '/projects/alea/images/ocr.png',
-          title: 'Demo OCR y Procesamiento',
-          thumbnail: '/projects/alea/images/ocr-thumb.png'
-        },
-        {
-          type: 'pdf' as const,
-          url: '/projects/alea/docs/api-docs.pdf',
-          title: 'Documentación de la API'
-        }
-      ]
-    }
-  ];
+  // Mapear la configuración de proyectos al formato esperado por ProjectCard
+  const projects = projectsConfig.map(project => ({
+    projectId: project.id,
+    title: project.name,
+    description: project.description,
+    technologies: getProjectTechnologies(project.id),
+    githubUrl: getProjectGitHub(project.id),
+    demoUrl: project.demoUrl,
+    media: project.images.map(img => ({
+      type: 'image' as const,
+      url: img.url,
+      title: img.title,
+      thumbnail: img.thumbnail
+    }))
+  }));
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}

@@ -4,6 +4,8 @@ const nextConfig = {
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'dist',
+  basePath: '/Portafolio',
+  assetPrefix: '/Portafolio',
   images: {
     unoptimized: true
   }

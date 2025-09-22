@@ -11,6 +11,7 @@ type ProjectCardProps = {
   description: string;
   technologies: string[];
   githubUrl?: string;
+  demoUrl?: string;  // URL para el botón "Ver demo"
   projectId: string;  // Identificador único del proyecto (ej: 'alea', 'bank-api')
   media: {
     type: 'image' | 'pdf';
@@ -20,7 +21,7 @@ type ProjectCardProps = {
   }[];
 };
 
-export function ProjectCard({ title, description, technologies, githubUrl, media, projectId }: ProjectCardProps) {
+export function ProjectCard({ title, description, technologies, githubUrl, demoUrl, media, projectId }: ProjectCardProps) {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [initialSlide, setInitialSlide] = useState(0);
   const [dynamicMedia, setDynamicMedia] = useState(media);
@@ -119,10 +120,21 @@ export function ProjectCard({ title, description, technologies, githubUrl, media
       {githubUrl && (
         <Link
           href={githubUrl}
-          className="text-primary hover:text-blue-600"
+          className="text-primary hover:text-blue-600 inline-block mr-4"
           target="_blank"
         >
           Ver proyecto →
+        </Link>
+      )}
+
+      {/* Demo Link */}
+      {demoUrl && (
+        <Link
+          href={demoUrl}
+          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg inline-block transition-colors"
+          target="_blank"
+        >
+          Ver demo
         </Link>
       )}
 
