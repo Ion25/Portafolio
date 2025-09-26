@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Navbar from '../components/Navbar'
 import { ProjectCard } from '../components/ProjectCard'
 import { projectsConfig } from '../lib/projects'
 import { 
@@ -34,20 +35,22 @@ export default function Home() {
   }));
 
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-6">Jhon Anthony Apaza Condori</h1>
-            <h2 className="text-2xl text-gray-600 mb-8">Backend Developer</h2>
-            <p className="text-lg text-gray-700 mb-8">
-              Estudiante de último semestre de Ciencias de la Computación con experiencia en backend,
-              sistemas distribuidos e Inteligencia Artificial.
-            </p>
-            <div className="flex justify-center gap-4">
-              <Link href="https://github.com/Ion25" 
-                    className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition"
+    <>
+      <Navbar />
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section id="inicio" className="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center">
+              <h1 className="text-4xl font-bold mb-6">Jhon Anthony Apaza Condori</h1>
+              <h2 className="text-2xl text-gray-600 mb-8">Backend Developer</h2>
+              <p className="text-lg text-gray-700 mb-8">
+                Estudiante de último semestre de Ciencias de la Computación con experiencia en backend,
+                sistemas distribuidos e Inteligencia Artificial.
+              </p>
+              <div className="flex justify-center gap-4">
+                <Link href="https://github.com/Ion25" 
+                      className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition"
                     target="_blank">
                 GitHub
               </Link>
@@ -61,7 +64,7 @@ export default function Home() {
       </section>
 
       {/* Proyectos Destacados */}
-      <section className="py-20">
+      <section id="proyectos" className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Proyectos Destacados</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -73,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* Habilidades */}
-      <section className="bg-gray-50 py-20">
+      <section id="habilidades" className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Habilidades Técnicas</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -150,6 +153,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   )
 }
