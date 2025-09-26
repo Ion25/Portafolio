@@ -39,7 +39,7 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section id="inicio" className="bg-gradient-to-b from-gray-50 to-gray-100 py-20">
+        <section id="inicio" className="bg-gradient-to-b from-gray-50 to-gray-100 hero-pattern py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl font-bold mb-6">Jhon Anthony Apaza Condori</h1>

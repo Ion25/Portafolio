@@ -16,6 +16,69 @@ body {
   padding-top: 80px; /* Espacio para el menú fijo */
 }
 
+/* Patrón de fondo sutil para la sección hero */
+.hero-pattern {
+  background-image: 
+    /* Círculos pequeños */
+    radial-gradient(circle at 20px 20px, rgba(156, 163, 175, 0.15) 1px, transparent 1px),
+    /* Líneas diagonales suaves */
+    linear-gradient(45deg, rgba(156, 163, 175, 0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(156, 163, 175, 0.05) 25%, transparent 25%),
+    /* Puntos más grandes espaciados */
+    radial-gradient(circle at 60px 60px, rgba(156, 163, 175, 0.08) 2px, transparent 2px),
+    /* Líneas horizontales muy suaves */
+    linear-gradient(0deg, rgba(156, 163, 175, 0.03) 1px, transparent 1px);
+  
+  background-size: 
+    40px 40px,
+    20px 20px,
+    20px 20px,
+    120px 120px,
+    80px 80px;
+  
+  background-position: 
+    0 0,
+    0 0,
+    10px 10px,
+    0 0,
+    0 0;
+}
+
+/* Patrón alternativo más minimalista */
+.hero-pattern-minimal {
+  background-image:
+    /* Puntos muy sutiles */
+    radial-gradient(circle at 25% 25%, rgba(156, 163, 175, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(156, 163, 175, 0.1) 1px, transparent 1px),
+    /* Líneas geométricas suaves */
+    linear-gradient(90deg, rgba(156, 163, 175, 0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(156, 163, 175, 0.04) 1px, transparent 1px);
+  
+  background-size: 
+    50px 50px,
+    50px 50px,
+    25px 25px,
+    25px 25px;
+  
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+}
+
+/* Patrón hexagonal sutil */
+.hero-pattern-hex {
+  background-image:
+    radial-gradient(circle farthest-side at 0% 50%, rgba(156, 163, 175, 0.1) 23.5%, transparent 0%) 21px 30px,
+    radial-gradient(circle farthest-side at 0% 50%, rgba(156, 163, 175, 0.05) 23.5%, transparent 0%) 19px 30px,
+    linear-gradient(rgba(156, 163, 175, 0.02) 14%, transparent 15%, transparent 85%, rgba(156, 163, 175, 0.02) 86%) 0 0,
+    linear-gradient(90deg, rgba(156, 163, 175, 0.02) 14%, transparent 15%, transparent 85%, rgba(156, 163, 175, 0.02) 86%) 0 0;
+  
+  background-size: 40px 60px, 40px 60px, 20px 30px, 20px 30px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
 /* Estilos para el menú de navegación fijo */
 .navbar {
   position: fixed;
