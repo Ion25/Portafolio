@@ -148,9 +148,9 @@ export const projectsConfig: Project[] = [
   },
   {
     id: 'cnn-forward',
-    name: 'CNN Forward Propagation',
-    description: 'Implementación de red neuronal convolucional',
-    technologies: ['Python', 'TensorFlow', 'NumPy', 'Machine Learning', 'Deep Learning', 'CNN'],
+    name: 'Vision Transformer (ViT) Implementation in C++',
+    description: 'Implementación desde cero de un Vision Transformer (ViT) en C++ con libtorch, entrenado en MNIST y Fashion-MNIST, con soporte para inferencia en imágenes reales y uso de los pesos .pt para probar con nuevas imágenes.',
+    technologies: ['C++', 'libtorch', 'PyTorch', 'Machine Learning', 'Deep Learning', 'Vision Transformer', 'MNIST', 'Fashion-MNIST'],
     githubUrl: 'https://github.com/Ion25/vitc-.git',
     images: [
       {
